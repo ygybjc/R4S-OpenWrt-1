@@ -14,9 +14,9 @@ sed -i 's,"lan_led","nanopi-r4s:green:lan",g' ./target/linux/rockchip/patches-5.
 sed -i 's,"wan_led","nanopi-r4s:green:wan",g' ./target/linux/rockchip/patches-5.4/302-arm64-dts-rockchip-Add-Nanopi-R4S-board-support.patch
 
 #overclock 1.8/2.2
-cp -f ../PATCH/new/main/211-nanopi4-switch-opp-table.patch ./target/linux/rockchip/patches-5.4/211-nanopi4-switch-opp-table.patch
-cp -f ../PATCH/new/main/212-rk3399-overclock-rk3399-to-max-values.patch ./target/linux/rockchip/patches-5.4/212-rk3399-overclock-rk3399-to-max-values.patch
-cp -f ../PATCH/new/main/213-RK3399-set-critical-CPU-temperature-for-thermal-throttling.patch ./target/linux/rockchip/patches-5.4/213-RK3399-set-critical-CPU-temperature-for-thermal-throttling.patch
+#cp -f ../PATCH/new/main/211-nanopi4-switch-opp-table.patch ./target/linux/rockchip/patches-5.4/211-nanopi4-switch-opp-table.patch
+#cp -f ../PATCH/new/main/212-rk3399-overclock-rk3399-to-max-values.patch ./target/linux/rockchip/patches-5.4/212-rk3399-overclock-rk3399-to-max-values.patch
+#cp -f ../PATCH/new/main/213-RK3399-set-critical-CPU-temperature-for-thermal-throttling.patch ./target/linux/rockchip/patches-5.4/213-RK3399-set-critical-CPU-temperature-for-thermal-throttling.patch
 
 ##准备工作
 #使用19.07的feed源
