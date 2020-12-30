@@ -266,10 +266,14 @@ sed -i 's,include ../..,include $(TOPDIR)/feeds/luci,g' ./package/new/luci-app-s
 git clone -b master --depth 1 https://github.com/destan19/OpenAppFilter.git package/new/OpenAppFilter
 #Docker
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
+sed -i 's/+docker-ce/+docker \\\n\t+dockerd/g' ./package/luci-app-dockerman/Makefile
 svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker package/luci-lib-docker
-svn co https://github.com/coolsnowwolf/packages/trunk/utils/docker-ce feeds/packages/utils/docker-ce
-sed -i '/runc.installer/d' ./feeds/packages/utils/docker-ce/Makefile
-ln -sf ../../../feeds/packages/utils/docker-ce ./package/feeds/packages/docker-ce
+svn co https://github.com/openwrt/packages/trunk/utils/docker-compose feeds/packages/utils/docker-compose
+ln -sf ../../../feeds/packages/utils/docker-compose ./package/feeds/packages/docker-compose
+svn co https://github.com/openwrt/packages/trunk/utils/docker feeds/packages/utils/docker
+ln -sf ../../../feeds/packages/utils/docker ./package/feeds/packages/docker
+svn co https://github.com/openwrt/packages/trunk/utils/dockerd feeds/packages/utils/dockerd
+ln -sf ../../../feeds/packages/utils/dockerd ./package/feeds/packages/dockerd
 svn co https://github.com/openwrt/packages/trunk/utils/cgroupfs-mount feeds/packages/utils/cgroupfs-mount
 ln -sf ../../../feeds/packages/utils/cgroupfs-mount ./package/feeds/packages/cgroupfs-mount
 svn co https://github.com/openwrt/packages/trunk/utils/containerd feeds/packages/utils/containerd
