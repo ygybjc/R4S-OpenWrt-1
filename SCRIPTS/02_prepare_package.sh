@@ -148,6 +148,8 @@ svn co https://github.com/openwrt/packages/trunk/lang/python/python-texttable fe
 ln -sf ../../../feeds/packages/lang/python/python-texttable ./package/feeds/packages/python-texttable
 svn co https://github.com/openwrt/packages/trunk/lang/python/python-websocket-client feeds/packages/lang/python/python-websocket-client
 ln -sf ../../../feeds/packages/lang/python/python-websocket-client ./package/feeds/packages/python-websocket-client
+svn co https://github.com/openwrt/packages/trunk/lang/python/python-paramiko feeds/packages/lang/python/python-paramiko
+ln -sf ../../../feeds/packages/lang/python/python-paramiko ./package/feeds/packages/python-paramiko
 #beardropper
 git clone --depth 1 https://github.com/NateLol/luci-app-beardropper.git package/luci-app-beardropper
 sed -i 's/"luci.fs"/"luci.sys".net/g' package/luci-app-beardropper/luasrc/model/cbi/beardropper/setting.lua
